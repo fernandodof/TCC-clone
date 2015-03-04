@@ -115,3 +115,8 @@ body {
 #brand:hover{
     background-image: url('../images/logos/logo3.png');
 }
+
+#map {
+    background: url(../images/loader.GIF);
+    background-repeat: no-repeat;
+}
