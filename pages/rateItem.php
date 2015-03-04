@@ -32,9 +32,6 @@ if (filter_input(INPUT_GET, 'prod') != null) {
     header("Location: ../error");
 }
 
-echo $idProduto."<br>";
-echo $_SESSION['id']."<br>";
-
 $produto = $dao->findByKey('Produto', $idProduto);
 
 if($produto==null){
@@ -52,17 +49,19 @@ if (isset($_SESSION['id'])) {
     $smarty->assign('idsProdutosComprados', $idsProdutosComprados);
 }
 
-var_dump(in_array(strval($idProuto), $idsProdutosComprados));
+//var_dump(in_array(strval($idProuto), $idsProdutosComprados));
 
+$inArray = false;
 foreach ($idsProdutosComprados as $x){
-    echo $x."<br>";
+    echo "<br>".$x;
+    if($x == $idProduto){
+        $inArray = true;
+    } 
 }
 
-//
-//
-//if (!isset($_SESSION['id']) || $produto == null || $idsProdutosComprados == null || !in_array($idProuto, $idsProdutosComprados)) {
-//    header("Location: ../error");
-//}
+if (!isset($_SESSION['id']) || $produto == null || $idsProdutosComprados == null || $inArray) {
+    header("Location: ../error");
+}
 
 $params1['id_cliente'] = $_SESSION['id'];
 $params1['id_produto'] = $idProuto;
