@@ -84,9 +84,9 @@ if (isset($idsPedidosEntrega) && $idsPedidosEntrega != null) {
     $_SESSION['pedidosEntregaCarregados'] = $idsPedidosEntrega;
 }
 
-if (substr_count(filter_input(INPUT_SERVER, 'REQUEST_URI'), '/') == 4) {
+if (filter_input(INPUT_GET, 'produtoCadastrado')!=null) {
 
-    list(,,,, $produtoCadastrado) = explode('/', filter_input(INPUT_SERVER, 'REQUEST_URI'));
+    $produtoCadastrado = trim(filter_input(INPUT_GET, 'produtoCadastrado'));
 
     if ($produtoCadastrado === 'success') {
         $smarty->assign('success', $produtoCadastrado);
