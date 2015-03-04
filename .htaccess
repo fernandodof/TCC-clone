@@ -4,6 +4,6 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
-DirectoryIndex /pages/index
+DirectoryIndex /pages/index.php
 
 ErrorDocument 404 https://saborvirtual.herokuapp.com/pages/error.php
