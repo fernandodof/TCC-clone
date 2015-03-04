@@ -27,7 +27,7 @@ if (isset($_SESSION['latLong'])) {
     $params['latitude'] = $latLong[0];
     $params['longitude'] = $latLong[1];
 
-    $raio = 0.5;
+    $raio = 5;
     if (isset($_SESSION['id']) && CheckLoggedIn::checkPermission(UserTypes::CLIENTE)) {
         $raio = $_SESSION['raio'];
     }
