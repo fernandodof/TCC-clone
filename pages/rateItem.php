@@ -59,7 +59,7 @@ foreach ($idsProdutosComprados as $x){
     } 
 }
 
-if (!isset($_SESSION['id']) || $produto == null || $idsProdutosComprados == null || $inArray) {
+if (!isset($_SESSION['id']) || $produto == null || $idsProdutosComprados == null || !$inArray) {
     header("Location: ../error");
 }
 
