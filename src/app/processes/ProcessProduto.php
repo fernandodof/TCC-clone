@@ -87,7 +87,7 @@ function cadastrarProduto() {
 //        }
 
         //getting folder for restaurants image upload
-        $restauranteFolder = str_replace(' ', '', $restaurante->getNome());
+        $restauranteFolder = strtolower(str_replace(' ', '', $restaurante->getNome()));
 
         //images directorty
         $imgRoot = '../../../' . 'images/';
