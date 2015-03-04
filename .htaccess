@@ -3,7 +3,7 @@ Options +FollowSymLinks -MultiViews
 RewriteEngine On
 RewriteCond %{QUERY_STRING} !="" #if there is a query string
 RewriteCond %{QUERY_STRING} !^p=.* #wordpress users: allow post tempalinks
-RewriteCond %{REQUEST_URI} !^/{REQUEST_URI}.* #wordpress users: don't break admin
+RewriteCond %{REQUEST_URI} !^/%{REQUEST_URI}.* #wordpress users: don't break admin
 RewriteRule ^(.*)$ /$1? [R=301,L] #remove query string
 
 ErrorDocument 404 /pages/error.php
