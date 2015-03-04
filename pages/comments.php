@@ -13,10 +13,20 @@ if (!session_id()) {
 }
 
 $dao = new Dao();
+//
+//list(,,,, $res) = explode('/', filter_input(INPUT_SERVER, 'REQUEST_URI'));
 
-list(,,,, $res) = explode('/', filter_input(INPUT_SERVER, 'REQUEST_URI'));
+if (filter_input(INPUT_GET, 'res') != null) {
+    $res = filter_input(INPUT_GET, 'res');
+}else{
+    header("Location: ../error");
+}
 
 $restaurante = $dao->findByKey('Restaurante', $res);
+
+if ($restaurante == null) {
+    header("Location: ../error");
+}
 
 $idsRestaurantesComprados = null;
 

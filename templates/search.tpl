@@ -79,7 +79,7 @@
 
                                     {if isset($idsRestaurantesComprados) and in_array($restaurante->getId(), $idsRestaurantesComprados)}
                                         <div class="row">
-                                            <a class="btn btn-default btn-sm pull-left btAvaliar visible-lg visible-md" href="{$templateRoot}pages/rate/{$restaurante->getId()}">Avaliar estabelecimento</a>
+                                            <a class="btn btn-default btn-sm pull-left btAvaliar visible-lg visible-md" href="{$templateRoot}pages/rate?res={$restaurante->getId()}">Avaliar estabelecimento</a>
                                         </div>
                                     {/if}
 
@@ -87,16 +87,16 @@
                                         <div class="col-md-6 col-sm-8 col-xs-12">
                                             <input class="rateInputs pull-left" data-show-clear="false" value="{$avgRating[$i]}">
                                         </div>
-                                        <a class="btn btn-info btn-sm pull-right btVerCardapio visible-lg visible-md" href="{$templateRoot}pages/restaurant/{$restaurante->getId()}">Visualizar Cardápio</a>
-                                        <a class="btn btn-primary btn-xs pull-right commentButton visible-lg visible-md {if (count($restaurante->getComentarios()) == 0)} disabled {/if}" href="{$templateRoot}pages/comments/{$restaurante->getId()}"><span class="fa fa-comment fa-2x commentIcon"></span> 
+                                        <a class="btn btn-info btn-sm pull-right btVerCardapio visible-lg visible-md" href="{$templateRoot}pages/restaurant?res={$restaurante->getId()}">Visualizar Cardápio</a>
+                                        <a class="btn btn-primary btn-xs pull-right commentButton visible-lg visible-md {if (count($restaurante->getComentarios()) == 0)} disabled {/if}" href="{$templateRoot}pages/comments?res={$restaurante->getId()}"><span class="fa fa-comment fa-2x commentIcon"></span> 
                                             <span class="badge commentCountBadge">{count($restaurante->getComentarios())}</span></a>
 
-                                        <a class="btn btn-info btn-sm pull-right btVerCardapioSm visible-xs visible-sm btn-block" href="{$templateRoot}pages/restaurant/{$restaurante->getId()}">Visualizar Cardápio</a>
-                                        <a class="btn btn-primary btn-xs pull-right commentButtonSm visible-xs visible-sm btn-block {if (count($restaurante->getComentarios()) == 0)} disabled {/if}" href="{$templateRoot}pages/comments/{$restaurante->getId()}"><span class="fa fa-comment fa-2x commentIcon"></span> 
+                                        <a class="btn btn-info btn-sm pull-right btVerCardapioSm visible-xs visible-sm btn-block" href="{$templateRoot}pages/restaurant?res={$restaurante->getId()}">Visualizar Cardápio</a>
+                                        <a class="btn btn-primary btn-xs pull-right commentButtonSm visible-xs visible-sm btn-block {if (count($restaurante->getComentarios()) == 0)} disabled {/if}" href="{$templateRoot}pages/comments?res={$restaurante->getId()}"><span class="fa fa-comment fa-2x commentIcon"></span> 
                                             <span class="badge commentCountBadge">{count($restaurante->getComentarios())}</span> Comentários</a>
 
                                         {if isset($idsRestaurantesComprados) and in_array($restaurante->getId(), $idsRestaurantesComprados)}
-                                            <a class="btn btn-default btn-sm pull-left btAvaliar visible-xs visible-sm btn-block" href="{$templateRoot}pages/rate/{$restaurante->getId()}">Avaliar estabelecimento</a>
+                                            <a class="btn btn-default btn-sm pull-left btAvaliar visible-xs visible-sm btn-block" href="{$templateRoot}pages/rate?res={$restaurante->getId()}">Avaliar estabelecimento</a>
                                         {/if}
 
                                     </div>

@@ -155,7 +155,7 @@ if (count($restaurants) == 0) {
         echo "</div>";
         if (isset($idsRestaurantesComprados) && in_array($restaurante->getId(), $idsRestaurantesComprados)) {
             echo "<div class='row'>";
-            echo "<a class='btn btn-default btn-sm pull-left btAvaliar visible-lg visible-md' href='" . $templateRoot . "pages/rate/" . $restaurante->getId() . "'>Avaliar estabelecimento</a>";
+            echo "<a class='btn btn-default btn-sm pull-left btAvaliar visible-lg visible-md' href='" . $templateRoot . "pages/rate?res=" . $restaurante->getId() . "'>Avaliar estabelecimento</a>";
             echo "</div>";
         }
 
@@ -163,24 +163,24 @@ if (count($restaurants) == 0) {
         echo "<div class='col-md-6 col-sm-8 col-xs-12'>";
         echo "<input class='rateInputs pull-left' data-show-clear='false' value='" . $avgRating[$i] . "'>";
         echo "</div>";
-        echo "<a class='btn btn-info btn-sm pull-right btVerCardapio visible-lg visible-md' href='" . $templateRoot . "pages/restaurant/" . $restaurante->getId() . "'>Visualizar Cardápio</a>";
+        echo "<a class='btn btn-info btn-sm pull-right btVerCardapio visible-lg visible-md' href='" . $templateRoot . "pages/restaurant?res=" . $restaurante->getId() . "'>Visualizar Cardápio</a>";
         echo "<a class='btn btn-primary btn-xs pull-right commentButton visible-lg visible-md'";
         if (count($restaurante->getComentarios()) == 0) {
             echo " disabled ";
         }
-        echo "href='" . $templateRoot . "pages/comments/" . $restaurante->getId() . "'><span class='fa fa-comment fa-2x commentIcon'></span> ";
+        echo "href='" . $templateRoot . "pages/comments?res=" . $restaurante->getId() . "'><span class='fa fa-comment fa-2x commentIcon'></span> ";
         echo "<span class='badge commentCountBadge'>" . count($restaurante->getComentarios()) . "</span>";
         echo "</a>";
-        echo "<a class='btn btn-info btn-sm pull-right btVerCardapioSm visible-xs visible-sm btn-block' href='" . $templateRoot . "pages/restaurant/" . $restaurante->getId() . "'>Visualizar Cardápio</a>";
+        echo "<a class='btn btn-info btn-sm pull-right btVerCardapioSm visible-xs visible-sm btn-block' href='" . $templateRoot . "pages/restaurant?res=" . $restaurante->getId() . "'>Visualizar Cardápio</a>";
         echo "<a class='btn btn-primary btn-xs pull-right commentButtonSm visible-xs visible-sm btn-block'";
         if (count($restaurante->getComentarios()) == 0) {
             echo " disabled";
         }
-        echo "href='" . $templateRoot . "pages/comments/" . $restaurante->getId() . "'><span class='fa fa-comment fa-2x commentIcon'></span> ";
+        echo "href='" . $templateRoot . "pages/comments?res=" . $restaurante->getId() . "'><span class='fa fa-comment fa-2x commentIcon'></span> ";
         echo "<span class='badge commentCountBadge'>" . count($restaurante->getComentarios()) . "</span> Comentários";
         echo "</a>";
         if (isset($idsRestaurantesComprados) and in_array($restaurante->getId(), $idsRestaurantesComprados)) {
-            echo "<a class='btn btn-default btn-sm pull-left btAvaliar visible-xs visible-sm btn-block' href='" . $templateRoot . "pages/rate/" . $restaurante->getId() . "'>Avaliar estabelecimento</a>";
+            echo "<a class='btn btn-default btn-sm pull-left btAvaliar visible-xs visible-sm btn-block' href='" . $templateRoot . "pages/rate?res=" . $restaurante->getId() . "'>Avaliar estabelecimento</a>";
         }
 
         echo "</div>";
