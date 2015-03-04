@@ -32,8 +32,8 @@ if (filter_input(INPUT_GET, 'prod') != null) {
     header("Location: ../error");
 }
 
-echo $idProduto;
-echo $_SESSION['id'];
+echo $idProduto."<br>";
+echo $_SESSION['id']."<br>";
 
 $produto = $dao->findByKey('Produto', $idProduto);
 
@@ -54,6 +54,11 @@ if (isset($_SESSION['id'])) {
 
 var_dump($idsProdutosComprados);
 var_dump(in_array($idProuto, $idsProdutosComprados));
+
+foreach ($idsProdutosComprados as $x){
+    echo $x."<br>";
+}
+
 //
 //
 //if (!isset($_SESSION['id']) || $produto == null || $idsProdutosComprados == null || !in_array($idProuto, $idsProdutosComprados)) {
