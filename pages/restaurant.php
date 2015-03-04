@@ -13,6 +13,8 @@ require_once $path . 'src/app/util/UserTypes.php';
 session_start();
 
 $slashCount = substr_count(filter_input(INPUT_SERVER, 'REQUEST_URI'), '/');
+echo $slashCount;
+exit();
 
 if ($slashCount < 4) {
     header("Location: ../error");
