@@ -36,7 +36,7 @@ echo $produto;
 
 $produto = $dao->findByKey('Produto', $idProduto);
 
-var_dump($produto);
+//var_dump($produto);
 
 //if($produto==null){
 //    header("Location: ../error");
