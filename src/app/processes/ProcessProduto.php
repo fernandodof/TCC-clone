@@ -111,5 +111,4 @@ function cadastrarProduto() {
     $restaurante->addProduto($produto);
     $dao->save($restaurante);
     header("Location: ../../../pages/funcionarioPage?produtoCadastrado=sucesso");
-    exit();
 }
