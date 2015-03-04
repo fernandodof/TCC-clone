@@ -39,12 +39,12 @@ class Dao {
         $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__ . "/../"), $isDevMode);
         $entityManager = EntityManager::create($dbParams, $config);
 
-/*        $metadata = $entityManager->getMetadataFactory()->getAllMetadata();
+        $metadata = $entityManager->getMetadataFactory()->getAllMetadata();
 
         if (!empty($metadata)) {
             $schemaTool = new \Doctrine\ORM\Tools\SchemaTool($entityManager);
             $schemaTool->updateSchema($metadata);
-        }*/
+        }
         $this->em = $entityManager;
     }
 
