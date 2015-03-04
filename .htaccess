@@ -1,5 +1,4 @@
 Options -MultiViews
-
 DirectoryIndex /pages/index.php
 
 RewriteEngine On
