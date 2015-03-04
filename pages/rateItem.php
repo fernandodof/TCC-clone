@@ -52,8 +52,7 @@ if (isset($_SESSION['id'])) {
     $smarty->assign('idsProdutosComprados', $idsProdutosComprados);
 }
 
-var_dump($idsProdutosComprados);
-var_dump(in_array($idProuto, $idsProdutosComprados));
+var_dump(in_array(strval($idProuto), $idsProdutosComprados));
 
 foreach ($idsProdutosComprados as $x){
     echo $x."<br>";
