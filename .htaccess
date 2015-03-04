@@ -1,8 +1,3 @@
 Options +FollowSymLinks -MultiViews
 
-RewriteEngine On
-RewriteRule ^parts/([^/\.]+)/([^/\.]+)/?$ parts.php?p=$1&f=$2 [L,QSA]
-RewriteRule ^parts/([^/\.]+)/?$ parts.php?p=$1 [L,QSA]
-RewriteRule ^parts parts.php [L,QSA]
-
-ErrorDocument 404 /pages/error.php
+ErrorDocument 404 pages/error.php
