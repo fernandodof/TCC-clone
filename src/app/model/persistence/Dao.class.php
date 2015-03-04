@@ -4,7 +4,7 @@
 //require_once 'C:\wamp\www\Restaurantes\vendor\autoload.php';
 //echo str_replace("\\", '/',  dirname(__DIR__).'/');
 //require_once "localhost/Restaurantes/vendor/autoload.php";
-require_once $_SERVER["DOCUMENT_ROOT"].'/vendor/autoload.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
@@ -17,14 +17,14 @@ class Dao {
     public function __construct() {
         //$paths = array("../entities");
         $isDevMode = true;
-		
-		
-		$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-		$server = $url["host"];
-		$username = $url["user"];
-		$password = $url["pass"];
-		$db = substr($url["path"], 1);
+
+        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+        $server = $url["host"];
+        $username = $url["user"];
+        $password = $url["pass"];
+        $db = substr($url["path"], 1);
 
         // the connection configuration
         $dbParams = array(
@@ -48,7 +48,7 @@ class Dao {
         $this->em = $entityManager;
     }
 
-   public function findByKey($entity, $id) {
+    public function findByKey($entity, $id) {
         return $this->em->find($entity, $id);
     }
 
@@ -212,7 +212,7 @@ class Dao {
         $stmt->execute($params);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-    
+
     public function getArrayResultOfNativeQuery($queryInstruction) {
         $stmt = $this->em->getConnection()->prepare($queryInstruction);
         $stmt->execute();
