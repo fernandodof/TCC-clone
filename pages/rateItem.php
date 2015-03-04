@@ -36,11 +36,9 @@ echo $idProduto;
 
 $produto = $dao->findByKey('Produto', $idProduto);
 
-//var_dump($produto);
-
-//if($produto==null){
-//    header("Location: ../error");
-//}
+if($produto==null){
+    header("Location: ../error");
+}
 //
 //$params2['id_produto'] = $produto;
 //$restaurante = $dao->getSingleResultOfNamedQueryWithParameters(Queries::GET_RESTAURANTE_BY_ID_PRODUTO, $params2);
