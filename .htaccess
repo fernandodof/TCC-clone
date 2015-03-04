@@ -1,5 +1,5 @@
 Options -MultiViews
-DirectoryIndex https://saborvirtual.herokuapp.com/pages/index
+DirectoryIndex pages/index.php
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
