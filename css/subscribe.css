@@ -1,0 +1,82 @@
+#senha1Div, #senha2Div, #telefoneDiv, #senhaAtualDiv{
+    padding: 0;
+    clear: left;
+    z-index: 10;
+}
+
+#enrececoLabel{
+    clear: left;    
+}
+
+#paisDiv *{
+    display: none;
+}
+
+#subscribeForm h2,h3{
+    margin-left: -15px;
+}
+
+#subscribeForm #sub, #edit{
+    margin-right: -15px;
+}
+
+.glyphicon-refresh-animate {
+    -animation: spin 1.2s infinite linear;
+    -webkit-animation: spin2 1.2s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+#subscribingDiv{
+    top: 50%;
+    left: 50%;
+    margin-top: -170px;
+    margin-left: -70px;
+    display: none;
+    position: fixed; 
+    z-index: 999999;
+    width: 180px;
+}
+
+
+#subscribingDiv h4{
+    text-align: center;
+    position: static;
+    width: 100%;
+    color: white;
+}
+
+
+#subscribingDiv img{
+    width: 100%;
+    position: static;
+}
+
+#confirmation{
+    display: none;
+};
+
+.jumbotron{
+    background: #4cae4c; 
+}
+
+.jumbotron h2{
+    font-size: xx-large;
+    text-align: justify;
+    text-align: center;
+}
+
+
+.jumbotron h2 span{
+    font-style: oblique;
+    font-weight: bold;
+}
+

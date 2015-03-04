@@ -1,0 +1,137 @@
+.opened{
+    border-left-color: black;
+    border-left-width: 8px;
+}
+
+.closed{
+    border-left-color: black;
+    border-left-width: 8px;
+}
+
+.well-sm{
+    padding: 0;
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+h3{
+    margin-left: 15px; 
+}
+
+.statusIndicatioClosed{
+    margin-left: 15px;
+}
+
+.statusIndicationOpened{
+    margin-right: 15px;
+}
+
+.moneyImg{
+    margin-right: -10px;
+}
+
+.cardImg{
+    margin-top: 5px;
+}
+
+.formaPagamentoDiv p{
+    margin-top: 8px;
+    margin-right: 5px;
+}
+
+.no-result-search{
+/*    text-align: center;*/
+    color: #228AAD;
+}
+
+.no-result-search #term, #type{
+    font-weight: bold;
+    color: #18BC9C;
+    font-size:x-large; 
+}
+
+#faces{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#faces #imgFace {
+    width: 100px;
+    width: 100px;
+}
+
+#circleLoader{
+    width: 55px;
+    margin-top: 15px;
+    display: none;
+}
+
+.panel-search .page-header{
+    height: 55px;
+}
+
+.rateInputs{
+    width: 100px;
+}
+
+.enderecoDiv address{
+    margin-left: -10px;
+}
+
+.enderecoDiv .fa{
+    margin-left: 15px;
+}
+
+.buttons{
+    margin-left: 20px;
+}
+
+.rateInputs{
+    margin-right: 240px;
+
+}
+
+btVerCardapio{
+    margin-right: -150px;
+}
+
+.star-rating{
+    margin-left: -40px;
+    margin-top: -5px;
+    width: 210px;
+}
+
+.buttons .commentButton{
+    margin-right: 15px;
+}
+
+.btAvaliar{
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 991px){ 
+    .star-rating{
+        margin-left: -45px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 250px;
+        text-align: center;
+    }
+
+    .buttons{
+        width: 100%;
+    }
+    
+    .buttons .commentButtonSm, .buttons .btVerCardapioSm{
+        margin-right: 15px;
+    }
+    
+    .buttons .btAvaliar{
+        margin-top: 5px;
+        margin-left: -15px;
+    }
+}

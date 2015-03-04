@@ -1,0 +1,168 @@
+.table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
+}
+
+.actions .btn{
+    margin-bottom: 5px;
+    width: 40px;
+}
+
+@media screen and (max-width: 600px) {
+    table#cart tbody td .form-control{
+        width:20%;
+        display: inline !important;
+    }
+    .actions .btn{
+        width:36%;
+        margin:1.5em 0;
+    }
+
+    .actions .btn-info{
+        float:left;
+    }
+    .actions .btn-danger{
+        float:right;
+    }
+
+    table#cart thead { display: none; }
+    table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
+    table#cart tbody tr td:first-child { background: #2C3E50; color: #fff; }
+    table#cart tbody td:before {
+        content: attr(data-th); font-weight: bold;
+        display: inline-block; width: 8rem;
+    }
+
+    table#cart tfoot td{display:block; }
+    table#cart tfoot td .btn{display:block;}
+
+}
+
+table#cart tbody tr{
+    border-bottom: 1px solid #2C3E50; 
+}
+
+table#cart tbody#quantidade{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#loader{
+    display: none;
+    position:fixed;
+    left: 30%;
+    top: 50%;
+    z-index: 100;
+}
+
+.nomeProduto{
+    font-weight: bold;
+}
+
+.tamanho{
+    font-size: small;
+    font-weight: normal;
+}
+
+table thead tr #ProdutoTh{
+    width: 50%;
+}
+
+table thead tr #ValorTh{
+    width:10%;
+}
+
+table thead tr #QuantidadeTh{
+    width:8%;
+}
+
+table thead tr #SubtotalTh{
+    width: 22%;
+}
+
+table thead tr #ButtonsTh{
+    width: 10%;
+}
+
+#cart {
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -ms-animation-duration:1.5s;
+}
+
+#confirmation{
+    text-align: center;
+    display: none;
+}
+
+#confirmation .success-msg{
+    color: #18BC9C;
+}
+
+#confirmation h2{
+    text-align: center;
+    width: 100%;
+    margin-top:55px;
+    font-size: xx-large;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+#enderecoEntrega h6{
+    font-weight: bold;
+}
+
+#enderecoEntrega #nome{
+    color: #002A80;
+}
+
+#enderecoEntrega p{
+    margin-bottom: 0;
+}
+
+textarea[name=observacoes] {
+    resize: none;
+}
+
+#faces{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#faces #imgFace {
+    width: 180px;
+    margin-bottom: 30px;
+}
+
+#sumitingOrderDiv{
+    top: 50%;
+    left: 50%;
+    margin-top: -170px;
+    margin-left: -70px;
+    display: none;
+    position: fixed; 
+    z-index: 999999;
+    width: 180px;
+    /*background: white;*/
+}
+
+#sumitingOrderDiv h4{
+    text-align: center;
+    position: static;
+    width: 100%;
+    color: white;
+}
+
+
+#sumitingOrderDiv img{
+    width: 100%;
+    position: static;
+}
+
+#confirmation a{
+    clear: left;
+    text-align: center;
+}

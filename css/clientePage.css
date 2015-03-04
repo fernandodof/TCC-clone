@@ -1,0 +1,189 @@
+.sidebar a span{
+    float: right;
+    font-size: 1.5em;
+    color: #101010;
+}
+
+.sidebar .active span{
+    color: #ACE63C;
+}
+
+.kindOfFoodDiv, .kindOfFoodDivButton{
+    padding: 0;
+}
+
+@media screen and (max-width: 992px){
+    .jumbotron{
+        padding-bottom: 180px;
+    }
+
+    .kindOfFoodSelect{
+        margin-left: 35px;
+    }
+
+    .searchDiv{
+        margin-left: 5px;
+    }
+
+    .btSearchDiv{
+        margin-left: 3px;
+    }
+
+    .btSearchDiv{
+        margin-bottom: 15px;
+
+    }
+}
+
+.btSearch{
+    z-index: 20;
+}
+
+.verItem:hover{
+    text-decoration: underline; 
+}
+
+.tab-content #tab_a .pedidoDiv{
+    border: 1px solid #D2D5D8;
+    border-left: 5px solid black;
+}
+
+.tab-content .pedidoHeader{
+    margin-top: -5px;
+}
+
+.tab-content .pedidoDiv .addCart{
+    margin-top: 7px;
+}
+
+.tab-content #tab_a .pedidoDiv table{
+    /*background: #D1D1E1;*/
+    background: white;
+}
+
+.tab-content #tab_a .pedidoDiv .restaurant{
+    font-weight: bold;
+}
+
+
+#subscribeForm .editField:disabled { 
+    background-color: #EEEEEE;
+    cursor: not-allowed;
+    color: darkgray;
+    outline: #2C3E50;
+}
+
+#changePassword #subPass{
+    margin-right: -15px;
+}
+
+#setRadius{
+    margin-left: 10px;
+}
+
+#setRadiusForm{
+    margin-bottom: 10px;
+}
+
+#mapMarker{
+    color: #2C3E50;
+}
+
+#helpKm{
+    margin-left: -10px;
+    margin-top: -14px;
+}
+
+#setRadiusForm h4, #setRadiusForm h5{
+    margin-left: -15px;
+}
+
+.red{
+    color: red;
+}
+
+
+.divider1{
+    border-bottom: 1px solid #18BC9C;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+
+#radiusImage{
+    width: 60px;
+    height: 60px;
+    fill: #257B6A;
+}
+
+#kmAddon{
+    border-radius: 0px 5px 5px 0px;
+}
+
+#loading{
+    float: left;
+    z-index: 100;
+    margin-left: 450px;
+    margin-top: 200px;
+}
+
+.glyphicon-refresh-animate {
+    -animation: spin 1.2s infinite linear;
+    -webkit-animation: spin2 1.2s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+
+#sub .glyphicon-refresh-animate, #subPass .glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+form .buttonLoadingIcon{
+    display: none;
+}
+
+@media only screen and (max-width: 768px){
+    .tab-content #tab_a .pedidoDiv .addCart{
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #changePassword{
+        margin-top: 50px;
+    }
+}   
+
+
+#clienteLoadingDiv{
+    top: 50%;
+    left: 50%;
+    margin-top: -170px;
+    margin-left: -70px;
+    display: none;
+    position: fixed; 
+    z-index: 999999;
+    width: 180px;
+    /*background: white;*/
+}
+
+#clienteLoadingDiv h4{
+    text-align: center;
+    position: static;
+    width: 100%;
+    color: white;
+}
+
+
+#clienteLoadingDiv img{
+    width: 100%;
+    position: static;
+}

@@ -1,0 +1,40 @@
+redirecionamento do emulador A (porta deste emulador é 5554)
+8090 é a porta em que o socket espera conexão.
+
+telnet localhost 5554
+
+redir add tcp:5050:8090
+
+
+redirecionamento do emulador B  (porta deste emulador é 5556)
+
+telnet localhost 5556
+
+redir add tcp:5051:8090
+
+
+
+
+
+10.0.2.2:5050
+
+-c@ip@port
+-g@x@y
+-p@points
+-n@notification
+
+5454 10.0.2.15
+
+
+
+
+
+
+
+
+wsimport -keep -verbose http://10.1.1.110:8080/Provedor/Calculadora?wsdl
+
+Fiz o pedido número: 1000989528112 mas o jogo não aparece disponível para download
+
+
+SELECT r.id, (6371 * acos(cos(radians(37) ) * cos( radians( e.latitude ) ) * cos( radians( e.longitude ) - radians(-122) ) + sin( radians(37) ) * sin( radians( latitude ) ) ) ) AS distance FROM restaurante R INNER JOIN endereco E ON r.id_endereco = e.id HAVING distance < 15000 

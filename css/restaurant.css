@@ -1,0 +1,218 @@
+.menu div{
+    padding: 0;
+}
+
+.header{
+    font-size:30px;
+    color: #099E56;
+    font-weight: bold;
+}
+
+.itemName{
+    border-right:4px solid lavender;
+}
+
+.iName{
+    font-size: 25px;
+    font-weight: bold;
+    color: #347235;
+}
+
+.itemName span{
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 1%;
+}
+
+.itemDiv{
+    padding-top: 4px;
+    border-bottom:1px solid black;
+}
+
+.prices div{
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.prices{
+    margin-top: 10px;
+}
+
+.prices p{
+    font-size: 16px;
+}
+
+.prices span{
+    font-size: 12px;
+}
+
+.tab-content{
+    margin-top: 10px;
+}
+
+#cardapioHeader ul{
+    list-style: none;
+    margin-left: 15px;
+    padding-left: 0px;
+}
+
+#cardapioHeader ul .dropdown{
+    margin-left: 0px;
+}
+
+#cardapioHeader ul .dropdown ul li .qutidadeDropdown p,
+#cardapioHeader ul .dropdown ul li .tamanhoDropdown p{
+    margin-left: 0px;
+    padding: 0 30px 0 45px;
+}
+
+
+#cardapioHeader ul .dropdown ul li .produtoDropdown p,
+#cardapioHeader ul .dropdown ul li .subtotalDropdown p{
+    margin-left: 0px;
+    padding: 0 30px 0 35px;
+}
+
+#cardapioHeader ul .dropdown ul li .produtoDropdown .noreProdutoDropdown{
+    font-weight: bold;
+}
+
+#cardapioHeader ul .dropdown ul li .subtotalDropdown .subtotal{
+    color: #245269;
+    font-weight: bold;
+}
+
+#cardapioHeader ul .dropdown ul li .totalDropdown p{
+    margin-left: 0px;
+    padding: 0 30px 0 35px;
+    font-size: large;
+    color: white;
+}
+
+#cardapioHeader ul .dropdown ul li .totalDropdown .total{
+    font-weight: bold;
+}
+
+#cardapioHeader ul .dropdown ul li p{
+    margin-bottom: 3px;
+}
+
+#cardapioHeader ul .dropdown ul .totalLi{
+    background: #2C3E50;
+    padding: 0;
+    margin-top: 10px;
+    height: 35px;
+}
+
+#cardapioHeader ul .dropdown ul .totalLi p{
+    margin-top: 5px;
+}
+
+#cardapioHeader ul .dropdown ul{
+    padding-bottom: 0;
+    max-height: 420px;
+    overflow-x: hidden; 
+    margin-top: 40px;
+    float: left;
+}
+
+#badgePedido{
+    margin: 0px 10px 0px 5px;
+}
+
+#proseguirPedido img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 12px;
+}
+
+#togglePedido{
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#proseguirPedido{
+    margin-bottom: 10px;
+}
+
+#loader{
+    display: none;
+    position:fixed;
+    z-index: 100;
+    vertical-align: text-top;
+}
+
+#nomeRestaurnatePedido{
+    text-align: center;
+    font-weight: bold;
+}
+
+.produto .btAvaliar{
+    margin-left: -15px;
+}
+
+.produto .btAvaliarDiv{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.produto .nameP{
+    margin-top: 12px
+}
+
+@media only screen and (max-width: 768px){ 
+    .produto .btAvaliar{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+        float: left;
+    }
+    
+    .produto .nameP{
+        float: none;
+    }
+
+}
+
+.produto .rateDiv{
+    text-align: right;
+    width: 265px;
+    float: right;
+}
+
+.produto .commentButton{
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+.highlightedItem .nameP{
+    color: #18BC9C;
+}
+
+#addingItemDiv{
+    top: 50%;
+    left: 50%;
+    margin-top: -170px;
+    margin-left: -70px;
+    display: none;
+    position: fixed; 
+    z-index: 999999;
+    width: 180px;
+    /*background: white;*/
+}
+
+
+#addingItemDiv h4{
+    text-align: center;
+    position: static;
+    width: 100%;
+    color: white;
+}
+
+
+#addingItemDiv img{
+    width: 100%;
+    position: static;
+}
