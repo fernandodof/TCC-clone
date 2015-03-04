@@ -1,6 +1,7 @@
 Options -MultiViews
 
-DirectoryIndex pages/index.php
+#DirectoryIndex pages/index.php
+RedirectMatch 301 /(.*) /pages/index$1
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
