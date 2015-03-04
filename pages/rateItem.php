@@ -53,10 +53,9 @@ if (isset($_SESSION['id'])) {
 
 $inArray = false;
 foreach ($idsProdutosComprados as $x){
-    echo "<br>".$x;
     if($x == $idProduto){
         $inArray = true;
-    } 
+    }
 }
 
 if (!isset($_SESSION['id']) || $produto == null || $idsProdutosComprados == null || !$inArray) {
