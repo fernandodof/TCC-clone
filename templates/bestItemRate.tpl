@@ -32,7 +32,7 @@
                             <input class="rateInputs pull-right" data-show-clear="false" value="{$avgRating[$i]}">  
                         </div>
                     </div>
-                    <a class="btn btn-info btn-xs btVerCardapio" href="{$templateRoot}pages/restaurant?prod={$restaurants->get($i)->getId()}">Cardápio</a>
+                    <a class="btn btn-info btn-xs btVerCardapio" href="{$templateRoot}pages/restaurant?res={$restaurants->get($i)->getId()}">Cardápio</a>
                     {foreach from = $produto->getTamanhos() item=tamanho}
                         <div class="tamanho row col-xs-12">
                             <div class="tam">
