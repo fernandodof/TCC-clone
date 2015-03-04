@@ -4,4 +4,6 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
+RedirectMatch 301 https://saborvirtual.herokuapp.com(.*) https://saborvirtual.herokuapp.com/pages/index$1
+
 ErrorDocument 404 https://saborvirtual.herokuapp.com/pages/error.php
