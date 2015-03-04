@@ -33,6 +33,7 @@ if (filter_input(INPUT_GET, 'prod') != null) {
 }
 
 echo $idProduto;
+echo $_SESSION['id'];
 
 $produto = $dao->findByKey('Produto', $idProduto);
 
