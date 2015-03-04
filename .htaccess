@@ -1,8 +1,10 @@
 Options +FollowSymLinks -MultiViews
 
+<IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f    # Existing File
 RewriteCond %{REQUEST_FILENAME} !-d    # Existing Directory
 RewriteRule . /restaurant.php [L]
+<IfModule>
 
 ErrorDocument 404 pages/error.php
