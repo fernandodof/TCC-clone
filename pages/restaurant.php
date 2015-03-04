@@ -12,13 +12,19 @@ require_once $path . 'src/app/util/UserTypes.php';
 
 session_start();
 
-$slashCount = substr_count(filter_input(INPUT_SERVER, 'REQUEST_URI'), '/');
+//$slashCount = substr_count(filter_input(INPUT_SERVER, 'REQUEST_URI'), '/');
+//
+//if ($slashCount < 3) {
+//    header("Location: ../error");
+//}
+//
+//list(,,, $res) = explode('/', filter_input(INPUT_SERVER, 'REQUEST_URI'));
 
-if ($slashCount < 3) {
+if (filter_input(INPUT_GET, 'res') != null) {
+    $res = filter_input(INPUT_GET, 'res');
+}else{
     header("Location: ../error");
 }
-
-list(,,, $res) = explode('/', filter_input(INPUT_SERVER, 'REQUEST_URI'));
 
 $dao = new Dao();
 if (isset($_SESSION['idRestauranteDoPedidoAtual'])) {
