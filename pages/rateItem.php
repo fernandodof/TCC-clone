@@ -18,15 +18,25 @@ if (!session_id()) {
 
 $dao = new Dao();
 
-$slashCount = substr_count(filter_input(INPUT_SERVER, 'REQUEST_URI'), '/');
+//$slashCount = substr_count(filter_input(INPUT_SERVER, 'REQUEST_URI'), '/');
+//
+//if($slashCount<4){
+//    header("Location: ../error");
+//}
+//
+//list(,,,, $idProuto) = explode('/', filter_input(INPUT_SERVER, 'REQUEST_URI'));
 
-if($slashCount<4){
+if (filter_input(INPUT_GET, 'prod') != null) {
+    $prod = filter_input(INPUT_GET, 'prod');
+}else{
     header("Location: ../error");
 }
 
-list(,,,, $idProuto) = explode('/', filter_input(INPUT_SERVER, 'REQUEST_URI'));
-
 $produto = $dao->findByKey('Produto', $idProuto);
+
+if($produto==null){
+    header("Location: ../error");
+}
 
 $params2['id_produto'] = $produto;
 $restaurante = $dao->getSingleResultOfNamedQueryWithParameters(Queries::GET_RESTAURANTE_BY_ID_PRODUTO, $params2);

@@ -11,9 +11,19 @@ require_once $path . 'src/app/model/VO/PedidoVO.class.php';
 session_start();
 $dao = new Dao();
 
-list(,,,, $idProduto) = explode('/', filter_input(INPUT_SERVER, 'REQUEST_URI'));
+//list(,,,, $idProduto) = explode('/', filter_input(INPUT_SERVER, 'REQUEST_URI'));
+
+if (filter_input(INPUT_GET, 'prod') != null) {
+    $prod = filter_input(INPUT_GET, 'prod');
+}else{
+    header("Location: ../error");
+}
 
 $produto = $dao->findByKey('Produto', $idProduto);
+
+if($produto==null){
+    header("Location: ../error");
+}
 
 $params['id_produto'] = $produto;
 $restaurante = $dao->getSingleResultOfNamedQueryWithParameters(Queries::GET_RESTAURANTE_BY_ID_PRODUTO, $params);
