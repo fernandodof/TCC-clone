@@ -32,7 +32,7 @@ if (filter_input(INPUT_GET, 'prod') != null) {
     header("Location: ../error");
 }
 
-$produto = $dao->findByKey('Produto', $idProuto);
+$produto = $dao->findByKey('Produto', $idProduto);
 
 if($produto==null){
     header("Location: ../error");
