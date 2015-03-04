@@ -4,8 +4,6 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
-RewriteCond %{HTTP_HOST} ^saborvirtual.herokuapp\.com$
-RewriteRule (.*) https://saborvirtual.herokuapp.com/$1 [R=301,L]
-RewriteRule ^$ pages/index [L]
+DirectoryIndex pages/index
 
 ErrorDocument 404 https://saborvirtual.herokuapp.com/pages/error.php
