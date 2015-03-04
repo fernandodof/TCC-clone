@@ -1,6 +1,6 @@
 Options -MultiViews
 
-DirectoryIndex pages/index
+DirectoryIndex /pages/index
 #RedirectMatch 301 /(.*) /pages/index$1
 
 RewriteEngine On
