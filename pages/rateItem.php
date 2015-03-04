@@ -39,50 +39,50 @@ $produto = $dao->findByKey('Produto', $idProduto);
 if($produto==null){
     header("Location: ../error");
 }
-//
-//$params2['id_produto'] = $produto;
-//$restaurante = $dao->getSingleResultOfNamedQueryWithParameters(Queries::GET_RESTAURANTE_BY_ID_PRODUTO, $params2);
-//
-//$idsProdutosComprados = null;
-//
-//if (isset($_SESSION['id'])) {
-//    $params['id_cliente'] = $_SESSION['id'];
-//    $idsProdutosComprados = $dao->getListResultOfNativeQueryWithParameters(Queries::GET_IDS_PRODUTOS_CLIENTE_COMPROOU, $params);
-//    $smarty->assign('idsProdutosComprados', $idsProdutosComprados);
-//}
+
+$params2['id_produto'] = $produto;
+$restaurante = $dao->getSingleResultOfNamedQueryWithParameters(Queries::GET_RESTAURANTE_BY_ID_PRODUTO, $params2);
+
+$idsProdutosComprados = null;
+
+if (isset($_SESSION['id'])) {
+    $params['id_cliente'] = $_SESSION['id'];
+    $idsProdutosComprados = $dao->getListResultOfNativeQueryWithParameters(Queries::GET_IDS_PRODUTOS_CLIENTE_COMPROOU, $params);
+    $smarty->assign('idsProdutosComprados', $idsProdutosComprados);
+}
 //
 //
 //if (!isset($_SESSION['id']) || $produto == null || $idsProdutosComprados == null || !in_array($idProuto, $idsProdutosComprados)) {
 //    header("Location: ../error");
 //}
-//
-//$params1['id_cliente'] = $_SESSION['id'];
-//$params1['id_produto'] = $idProuto;
-//$nota = $dao->getArrayResultOfNativeQueryWithParameters(Queries::GET_NOTA_CLINTE_PRODUTO, $params1);
-//$smarty->assign('nota', $nota['nota']);
-//
-//$avgRating;
-//$sum = 0;
-//$counter = 0;
-//foreach ($produto->getAvaliacoes() as $av) {
-//    $sum += $av->getNota();
-//    $counter++;
-//}
-//
-//if ($counter > 0) {
-//    $avg = $sum / $counter;
-//} else {
-//    $avg = 0;
-//}
-//
-//$avgRating = $avg;
-//
-//$smarty->assign('avgRating', $avgRating);
-//
-//include_once '../pages/header.php';
-//
-//$smarty->assign('restaurante', $restaurante);
-//$smarty->assign('produto', $produto);
-//$smarty->display($path . 'templates/rateItem.tpl');
-//
-//include_once $path . 'pages/footer.php';
+
+$params1['id_cliente'] = $_SESSION['id'];
+$params1['id_produto'] = $idProuto;
+$nota = $dao->getArrayResultOfNativeQueryWithParameters(Queries::GET_NOTA_CLINTE_PRODUTO, $params1);
+$smarty->assign('nota', $nota['nota']);
+
+$avgRating;
+$sum = 0;
+$counter = 0;
+foreach ($produto->getAvaliacoes() as $av) {
+    $sum += $av->getNota();
+    $counter++;
+}
+
+if ($counter > 0) {
+    $avg = $sum / $counter;
+} else {
+    $avg = 0;
+}
+
+$avgRating = $avg;
+
+$smarty->assign('avgRating', $avgRating);
+
+include_once '../pages/header.php';
+
+$smarty->assign('restaurante', $restaurante);
+$smarty->assign('produto', $produto);
+$smarty->display($path . 'templates/rateItem.tpl');
+
+include_once $path . 'pages/footer.php';
