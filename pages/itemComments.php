@@ -14,7 +14,7 @@ $dao = new Dao();
 //list(,,,, $idProduto) = explode('/', filter_input(INPUT_SERVER, 'REQUEST_URI'));
 
 if (filter_input(INPUT_GET, 'prod') != null) {
-    $prod = filter_input(INPUT_GET, 'prod');
+    $idProduto = filter_input(INPUT_GET, 'prod');
 }else{
     header("Location: ../error");
 }
