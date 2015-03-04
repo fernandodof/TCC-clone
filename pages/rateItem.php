@@ -51,6 +51,9 @@ if (isset($_SESSION['id'])) {
     $idsProdutosComprados = $dao->getListResultOfNativeQueryWithParameters(Queries::GET_IDS_PRODUTOS_CLIENTE_COMPROOU, $params);
     $smarty->assign('idsProdutosComprados', $idsProdutosComprados);
 }
+
+var_dump($idsProdutosComprados);
+var_dump(in_array($idProuto, $idsProdutosComprados));
 //
 //
 //if (!isset($_SESSION['id']) || $produto == null || $idsProdutosComprados == null || !in_array($idProuto, $idsProdutosComprados)) {
