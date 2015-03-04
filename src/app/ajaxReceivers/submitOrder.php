@@ -15,6 +15,7 @@ require_once '../model/VO/TamanhoVO.class.php';
 require_once '../util/SendEmail.class.php';
 
 session_start();
+date_default_timezone_set('America/Fortaleza');
 if(!isset($_SESSION['idRestauranteDoPedidoAtual'])){
     header('Location: ../../../pages/clientePage.php');
 }else{
