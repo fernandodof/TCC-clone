@@ -28,11 +28,11 @@ class Dao {
 
         // the connection configuration
         $dbParams = array(
-            'dbname' => $db;
+            'dbname' => $db,
             'user' => $username,
             'password' => $password,
             'host' => $server,
-            'driver' => 'pdo_mysql',
+            'driver' => 'pdo_mysql'
         );
 
 
