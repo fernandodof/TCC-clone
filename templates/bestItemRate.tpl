@@ -20,19 +20,19 @@
                     {if isset($idsProdutosComprados) and in_array($produto->getId(), $idsProdutosComprados)}
                         <p class="nome pull-left col-sm-10 nameP">{$produto->getNome()} - <small>{$restaurants->get($i)->getNome()}</small></p>
                         <div class="row btAvaliarDiv">
-                            <a class="btn btn-default btn-sm pull-right btAvaliar" href="{$templateRoot}pages/rateItem/{$produto->getId()}">Avaliar Ítem</a>
+                            <a class="btn btn-default btn-sm pull-right btAvaliar" href="{$templateRoot}pages/rateItem?prod={$produto->getId()}">Avaliar Ítem</a>
                         </div>
                     {else}
                         <p class="nome pull-left col-xs-12 nameP">{$produto->getNome()} - <small>{$restaurants->get($i)->getNome()}</small></p>
                     {/if}
                     <div class="col-xs-12">
                         <div class="rateDiv">
-                            <a class="btn btn-primary btn-xs pull-right commentButton {if (count($produto->getComentarios()) == 0)} disabled {/if}" href="{$templateRoot}pages/itemComments/{$produto->getId()}"><span class="fa fa-comment fa-2x commentIcon"></span> 
+                            <a class="btn btn-primary btn-xs pull-right commentButton {if (count($produto->getComentarios()) == 0)} disabled {/if}" href="{$templateRoot}pages/itemComments?prod={$produto->getId()}"><span class="fa fa-comment fa-2x commentIcon"></span> 
                                 <span class="badge commentCountBadge">{count($produto->getComentarios())}</span></a>
                             <input class="rateInputs pull-right" data-show-clear="false" value="{$avgRating[$i]}">  
                         </div>
                     </div>
-                    <a class="btn btn-info btn-xs btVerCardapio" href="{$templateRoot}pages/restaurant/{$restaurants->get($i)->getId()}">Cardápio</a>
+                    <a class="btn btn-info btn-xs btVerCardapio" href="{$templateRoot}pages/restaurant?prod={$restaurants->get($i)->getId()}">Cardápio</a>
                     {foreach from = $produto->getTamanhos() item=tamanho}
                         <div class="tamanho row col-xs-12">
                             <div class="tam">

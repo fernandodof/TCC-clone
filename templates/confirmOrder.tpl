@@ -73,7 +73,7 @@
                             <td class="text-center bold">Total R$ {$smarty.session.pedido->getValorTotal()}</td>
                         </tr>
                         <tr>
-                            <td><a href="{$templateRoot}pages/restaurant/{$smarty.session.idRestauranteDoPedidoAtual}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Voltar ao cardápio</a></td>
+                            <td><a href="{$templateRoot}pages/restaurant?res={$smarty.session.idRestauranteDoPedidoAtual}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Voltar ao cardápio</a></td>
                             <td colspan="2" class="hidden-xs"></td>
                             <td class="hidden-xs text-center bold">Total R$ {$smarty.session.pedido->getValorTotal()}</td>
                     <form method="POST" action="javascript:void(0)">

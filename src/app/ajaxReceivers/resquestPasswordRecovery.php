@@ -22,4 +22,4 @@ $dao->save($recuperarSenha);
 
 $sendEmail = new SendEmail();
 
-$sendEmail->sendPasswordRecoverEmail($cliente->getNome(), $templateRoot.'pages/resetPassword/'.$recuperarSenha->getCodigo(), $cliente->getEmail());
+$sendEmail->sendPasswordRecoverEmail($cliente->getNome(), $templateRoot.'pages/resetPassword?cod='.$recuperarSenha->getCodigo(), $cliente->getEmail());

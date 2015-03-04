@@ -118,7 +118,7 @@ if (isset($_SESSION['pedido'])) {
             echo "<td class='text-center'><strong>Total</strong></td>";
         echo "</tr>";
             echo "<tr>";
-            echo "<td><a href='../pages/restaurant/" . $idRestaurante . "' class='btn btn-warning'><i class='fa fa-angle-left'></i> Voltar ao cardápio</a></td>";
+            echo "<td><a href='../pages/restaurant?res=" . $idRestaurante . "' class='btn btn-warning'><i class='fa fa-angle-left'></i> Voltar ao cardápio</a></td>";
             echo "<td colspan='2' class='hidden-xs'></td>";
             echo "<td class='hidden-xs text-center'><strong>Total R$ " . $pedido->getValorTotal() . "</strong></td>";
             echo "<td><button class='btn btn-success btn-block' data-loading-text='Enviando.....' id='confirmar' onclick='checkout();'>Comfirmar <i class='fa fa-angle-right'></i></button></td>";

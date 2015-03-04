@@ -6,13 +6,13 @@ require_once $path . 'pages/smartyHeader.php';
 require_once $path . 'src/app/model/persistence/Dao.class.php';
 require_once $path . 'src/app/util/Queries.php';
 
-$slashCount = substr_count(filter_input(INPUT_SERVER, 'REQUEST_URI'), '/');
+//$slashCount = substr_count(filter_input(INPUT_SERVER, 'REQUEST_URI'), '/');
 
-if ($slashCount < 4) {
+if (filter_input(INPUT_GET, 'cod') != null) {
+    $codigo = filter_input(INPUT_GET, 'cod');
+}else{
     header("Location: ../error");
 }
-
-list(,,,, $codigo) = explode('/', filter_input(INPUT_SERVER, 'REQUEST_URI'));
 
 $dao = new Dao();
 $params['codigo'] = $codigo;
