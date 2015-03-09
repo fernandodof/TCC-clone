@@ -121,7 +121,7 @@ function addProduto1(idForm, orderAction, idRestarant) {
 //                undimPageAndEnableComponents();
                 alertify.success('Novo Item Adicionado');
                 createCartCount(idRestaurantePedido1);
-                window.location.replace(templateRoot + 'pages/restaurant/' + idRestarant);
+                window.location.replace(templateRoot + 'pages/restaurant?res=' + idRestarant);
             }
         },
         error: function (data) {
