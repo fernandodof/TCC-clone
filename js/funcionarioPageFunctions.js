@@ -416,6 +416,84 @@ function setUpFormValidation() {
 
 }
 
+
+function getOrderMap() {
+    var idRestaurante = $('#idRestaurante').val();
+    var start = $('#start').val();
+    var end = $('#end').val();
+
+    if (start === '' || end === '') {
+        return;
+    }
+
+    $('body').dimBackground();
+    $('#addingItemDiv').show();
+    $('#map-order-canvas').empty();
+
+    var data = {idRestaurante: idRestaurante, start: start, end: end};
+    var url = '../src/app/ajaxReceivers/ordersMap.php';
+    $.ajax({
+        type: "POST",
+        url: url,
+        async: true,
+        data: data,
+        success: function (serverResponse) {
+            //alertify.alert(serverResponse);
+            $('body').undim();
+            $('#addingItemDiv').hide();
+            var orders = JSON.parse(serverResponse);
+            $('#orderMapCount').html(orders.length + " pedidos encontrados");
+            if (orders.length > 0) {
+                initializeOrders(orders);
+            }
+        },
+        error: function (serverResponse) {
+            alertify.alert(serverResponse);
+            $('body').undim();
+            $('#addingItemDiv').hide();
+        }
+    });
+}
+
+function getTop5Chart(type) {
+    var idRestaurante = $('#idRestaurante').val();
+
+    $('body').dimBackground();
+    $('#addingItemDiv').show();
+    $('#chartMsg').empty();
+    var data = {idRestaurante: idRestaurante};
+    var url = '../src/app/ajaxReceivers/top5Chart.php';
+    $.ajax({
+        type: "POST",
+        url: url,
+        async: true,
+        data: data,
+        success: function (serverResponse) {
+            $('body').undim();
+            $('#addingItemDiv').hide();
+            var top5 = JSON.parse(serverResponse);
+            if (top5.length === 0) {
+                $('#chartMsg').html('Não foram entrados resultados');
+            } else {
+                switch (type) {
+                    case 'bar':
+                        createTop5Chart(top5);
+                        break;
+                    case 'pie':
+                        createTop5PieChart(top5);
+                        break;
+                }
+            }
+
+        },
+        error: function (serverResponse) {
+            alertify.alert(serverResponse);
+            $('body').undim();
+            $('#addingItemDiv').hide();
+        }
+    });
+}
+
 $(document).ready(function () {
     setInterval("updateOrdersList()", 3000);
     activate('img[src*=".svg"]');
@@ -431,6 +509,17 @@ $(document).ready(function () {
 
     $(".alert-danger").fadeTo(4000, 1500).slideUp(1500, function () {
         $("#erro-alert").alert('close');
+    });
+
+
+    $('.dates').datepicker({
+        format: "dd/mm/yyyy",
+        endDate: "today",
+        language: "pt-BR",
+        clearBtn: true,
+        keyboardNavigation: false,
+        forceParse: false,
+        autoclose: true
     });
 
 });

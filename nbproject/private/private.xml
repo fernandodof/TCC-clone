@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="2">
         <file>
-            <url>src/app/model/entities/Cliente.class.php</url>
-            <bookmark id="2">
-                <name/>
-                <line>179</line>
-                <key/>
-            </bookmark>
-        </file>
-        <file>
             <url>src/app/ajaxReceivers/newOrders.php</url>
             <bookmark id="1">
                 <name/>
@@ -17,23 +9,16 @@
                 <key/>
             </bookmark>
         </file>
+        <file>
+            <url>src/app/model/entities/Cliente.class.php</url>
+            <bookmark id="2">
+                <name/>
+                <line>179</line>
+                <key/>
+            </bookmark>
+        </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/E:/ADS/heroku/TCC/pages/restaurant.php</file>
-            <file>file:/E:/ADS/heroku/TCC/pages/rateItem.php</file>
-            <file>file:/E:/ADS/heroku/TCC/templates/index.tpl</file>
-            <file>file:/E:/ADS/heroku/TCC/pages/footer.php</file>
-            <file>file:/E:/ADS/heroku/TCC/src/app/ajaxReceivers/filterSearch.php</file>
-            <file>file:/E:/ADS/heroku/TCC/pages/error.php</file>
-            <file>file:/E:/ADS/heroku/TCC/pages/funcionarioPage.php</file>
-            <file>file:/E:/ADS/heroku/TCC/templates/search.tpl</file>
-            <file>file:/E:/ADS/heroku/TCC/pages/comments.php</file>
-            <file>file:/E:/ADS/heroku/TCC/pages/rate.php</file>
-            <file>file:/E:/ADS/heroku/TCC/templates/restaurant.tpl</file>
-            <file>file:/E:/ADS/heroku/TCC/src/app/util/Queries.php</file>
-            <file>file:/E:/ADS/heroku/TCC/pages/itemComments.php</file>
-            <file>file:/E:/ADS/heroku/TCC/pages/forgotPassword.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
